@@ -8,21 +8,21 @@ import org.junit.Test;
 public class MoodAnalyzerTest {
 	
 	@Test
-	public void testSadMood() {
+	public void testSadMood() throws MoodAnalysisException {
 		MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in sad mood");
 		String mood = moodAnalyzer.analyzeMood();
 		Assert.assertEquals(mood, "SAD");
 	}
 	
 	@Test
-	public void testHappyMood() {
+	public void testHappyMood() throws MoodAnalysisException {
 		MoodAnalyzer moodAnalyzer = new MoodAnalyzer("I am in happy mood");
 		String mood = moodAnalyzer.analyzeMood();
 		Assert.assertEquals(mood, "HAPPY");
 	}
 	
 	@Test
-	public void testNullMood() {
+	public void testNullMood() throws MoodAnalysisException {
 		MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
 		String mood = moodAnalyzer.analyzeMood();
 		Assert.assertEquals(mood, "HAPPY");
